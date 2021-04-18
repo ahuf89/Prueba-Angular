@@ -1,0 +1,103 @@
+.container-fluid {
+    background: -webkit-linear-gradient(to right, #2f0f3b, #491e7a);
+    background: -webkit-gradient(linear, left top, right top, from(#3e1052), to(#491e7a));
+    background: -webkit-linear-gradient(left, #2f0f3b, #491e7a);
+    background: -o-linear-gradient(left, #2f0f3b, #491e7a);
+    background: linear-gradient(to right, #2f0f3b, #491e7a);
+    -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    // justify-content: center;
+    // height: 100vh;    
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    .banner {
+        position: relative;
+        height: 400px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: multiply;
+        .sombra {
+            // border-radius: 0 15px 15px 0;
+            height: 100%;
+            width: 100%; // margin: -280px auto;
+            position: absolute;
+            text-align: center;
+            background: rgba(44, 16, 88, 0.4);
+        }
+        .position-relative {
+            position: relative;
+            .info-general {
+                .sombraImg {
+                    height: 300px;
+                    width: 200px;
+                    // height: 100%;
+                    position: absolute;
+                    text-align: center;
+                    background: rgba(44, 16, 88, 0.4);
+                }
+                position: absolute;
+                top: 130px;
+                // left: 100px;
+                color: #fff;
+                .cont-img {
+                    height: 300px;
+                    width: 200px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    background-blend-mode: multiply;
+                    -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+                    box-shadow: 0 0 40px rgba(7, 1, 1, 0.3);
+                }
+                .info {
+                    h2 {
+                        font-size: 2.5em;
+                    }
+                    font-size: 1em;
+                    line-height: 30%;
+                    .votes {
+                        margin-top: 5px!important;
+                        .popularity {
+                            padding: 0.3em 0.7em;
+                            border-radius: 2px;
+                            margin-right: 5px;
+                            margin-top: 5px;
+                            color: black;
+                            background-color: rgb(108, 80, 126);
+                        }
+                    }
+                }
+            }
+        }
+    } //banner
+    .info-specific {
+        margin-top: 70px!important;
+        // height: 40vh;
+        .genere {
+            margin-left: 150px;
+            .info {
+                margin-bottom: 0.4em;
+            }
+            a {
+                font-size: 0.8em;
+                color: rgb(108, 80, 126);
+            }
+        }
+        .overview {
+            margin-left: 75px;
+            .text {
+                font-size: 1em;
+            }
+            p {
+                mark {
+                    background-color: rgb(108, 80, 126)
+                }
+                .underline {
+                    background-color: rgb(108, 80, 126);
+                }
+            }
+        }
+    }
+}

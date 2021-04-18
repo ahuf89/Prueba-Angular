@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    color: white;
+    background: -webkit-linear-gradient(to right, #2f0f3b, #491e7a);
+    background: -webkit-gradient(linear, left top, right top, from(#3e1052), to(#491e7a));
+    background: -webkit-linear-gradient(left, #2f0f3b, #491e7a);
+    background: -o-linear-gradient(left, #2f0f3b, #491e7a);
+    background: linear-gradient(to right, #2f0f3b, #491e7a);
+    -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+.spacer {
+    flex: 1 1 auto;
+}

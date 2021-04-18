@@ -1,0 +1,43 @@
+<div class="body-login">
+    <div class="container d-flex justify-content-center">
+        <div class="cont-login mt-4">
+            <div class="login ">
+                <h4 class="text-center pt-4 pb-3">Iniciar sesión</h4>
+
+                <form [formGroup]="formL" (ngSubmit)="save($event)">
+                    <div class="col-12 d-flex justify-content-center flex-column pl-5 pr-5 ">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Correo</mat-label>
+                            <input matInput placeholder="nombre@ejemplo.com" required formControlName="name">
+                            <mat-error>Campo requerido</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Ingrese su contraseña</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password1">
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+
+                        <div class=" pb-3">
+                            <div class="d-flex justify-content-between mb-3">
+
+                                <button mat-button color="primary">Olvidé mi contraseña</button>
+                                <!-- <a>Olvidé mi contraseña</a> -->
+
+
+                                <button routerLink="/admin" type="submit" (click)="doSomething()" [disabled]="formL.invalid" mat-raised-button color="primary">Ingresar</button>
+
+
+                                <!-- <button routerLink="/admin" mat-raised-button color="primary">Ingresar</button> -->
+                            </div>
+                            <!-- <button id="loguear" type="submit" class="btn btn-danger">Login</button> -->
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

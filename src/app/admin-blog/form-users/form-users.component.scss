@@ -1,0 +1,19 @@
+.body-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login {
+    border-radius: 20px;
+    border-top: 8px solid #6025ae;
+    background: -webkit-linear-gradient(to right, #3e1052, #100220);
+    background: -webkit-gradient(linear, left top, right top, from(#3e1052), to(#100220));
+    background: -webkit-linear-gradient(left, #3e1052, #100220);
+    background: -o-linear-gradient(left, #3e1052, #100220);
+    background: linear-gradient(to right, #3e1052, #100220);
+    -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    width: 500px;
+}

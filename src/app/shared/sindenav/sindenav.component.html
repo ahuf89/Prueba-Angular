@@ -1,0 +1,33 @@
+<mat-sidenav #sidenav mode="push">
+    <mat-toolbar class="menu" color="primary">
+        <span class="ml-3"> Menú</span>
+        <span class="spacer"></span>
+        <button mat-icon-button (click)="sidenav.toggle()">
+                    <mat-icon>menu</mat-icon>
+            </button>
+    </mat-toolbar>
+    <mat-nav-list class="text-center">
+        <a (click)="regresar()" routerLink="/" mat-list-item (click)="sidenav.toggle()">
+            <mat-icon mat-list-icon>movie</mat-icon>
+            <span>Listado Peliculas</span>
+        </a>
+    </mat-nav-list>
+</mat-sidenav>
+
+<mat-toolbar>
+    <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+    <span class="spacer"></span>
+
+    <span></span>
+    <div class="contIconAdmin">
+        <mat-icon class="iconAdmin">
+            account_circle
+        </mat-icon>
+    </div>
+    <button routerLink="login" (click)="login()" mat-stroked-button>           
+            Login
+        </button>
+</mat-toolbar>

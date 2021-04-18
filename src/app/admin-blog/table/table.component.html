@@ -1,0 +1,36 @@
+<div class="body-table">
+    <div class="container d-flex justify-content-center">
+        <div>
+            <div class="mb-4">
+                <button (click)="registrar()" type="submit" mat-raised-button color="primary">Agregar Usuario</button>
+            </div>
+            <div class="boxTable">
+                <h1>Usuarios destacados</h1>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Codigo</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Nick</th>
+                            <th scope="col">Correo</th>
+                            <th scope="col">Sitio Web</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of users">
+                            <td>{{user.id}}</td>
+                            <td>{{user.name}}</td>
+                            <td>{{user.username}}</td>
+                            <td>
+                                <a class="mailUser" href="mailto:{{user.email}}">{{user.email}}</a>
+                            </td>
+                            <td>
+                                {{user.website}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

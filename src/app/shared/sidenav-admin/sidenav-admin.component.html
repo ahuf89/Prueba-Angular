@@ -1,0 +1,39 @@
+<mat-sidenav #sidenav mode="push">
+    <mat-toolbar class="menu" color="primary">
+        <span class="ml-3"> Menú</span>
+        <span class="spacer"></span>
+        <button mat-icon-button (click)="sidenav.toggle()">
+                    <mat-icon>menu</mat-icon>
+            </button>
+    </mat-toolbar>
+    <mat-nav-list class="text-center">
+        <a (click)="tabla()" mat-list-item (click)="sidenav.toggle()">
+            <mat-icon mat-list-icon><span class="material-icons-outlined">              
+                supervisor_account
+                </span></mat-icon>
+            <span>Usuarios Destacados</span>
+        </a>
+        <a (click)="registrar()" mat-list-item (click)="sidenav.toggle()">
+            <mat-icon mat-list-icon>note_add</mat-icon>
+            <span>Registrar Usuario</span>
+        </a>
+    </mat-nav-list>
+</mat-sidenav>
+
+<mat-toolbar>
+    <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+    <span class="spacer"></span>
+
+    <span></span>
+    <div class="contIconAdmin">
+        <mat-icon class="iconAdmin">
+            admin_panel_settings
+        </mat-icon>
+    </div>
+    <button routerLink="" (click)="logout()" mat-stroked-button>           
+            Logout
+    </button>
+</mat-toolbar>

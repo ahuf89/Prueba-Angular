@@ -1,0 +1,81 @@
+<ngx-spinner></ngx-spinner>
+
+<div #divPelicula>
+    <div class="container-fluid" *ngIf="movie != null">
+        <div class="container-fluid">
+            <div class="banner" style="background-image:url('{{this.uriImage}}{{movie.poster_path}}')">
+                <div class="sombra"></div>
+                <div class="position-relative container">
+
+                    <div class="info-general pt-3 d-flex">
+                        <div class="cont-img mr-4 mb-5" style="background-image:url('{{this. uriImage}}{{movie.backdrop_path}}')">
+                            <div class="sombraImg"></div>
+                        </div>
+                        <div class="info">
+                            <h2 class="mt-0">{{movie.title}}</h2>
+                            <div class=" mt-3 mb-1 votes d-flex mb-2">
+                                <p><span class="popularity">{{movie.vote_average}}</span>{{movie.vote_count}} </p>
+                            </div>
+
+                            <div class=" mb-3 votes d-flex mb-2">
+                                <!-- <div *ngFor="" class=" mb-3 votes d-flex mb-2"> -->
+                                <mat-icon>
+                                    star
+                                </mat-icon>
+                                <mat-icon>
+                                    star
+                                </mat-icon>
+                                <mat-icon>
+                                    star
+                                </mat-icon>
+                                <mat-icon>
+                                    star
+                                </mat-icon>
+                                <mat-icon>
+                                    star
+                                </mat-icon>
+                            </div>
+                            <div class=" mt-3 votes d-flex mb-2">
+                                <p><span class="popularity">Dur</span>{{movie.runtime}}</p>min
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <button (click)="regresar()" class="butoonMaterial m-2" mat-button color="primary">< Regresar</button>
+                        <!-- <button class="m-2" mat-raised-button color="primary">Ver trailer</button> -->
+                    </div>
+                    <!--Info-general-->
+                </div>
+            </div>
+            <!--banner-->
+        </div>
+        <div class=" info-specific d-flex   mt-0 container d-flex ">
+
+            <div class="overview mt-5 pt-4 pl-0 ml-0 col-8">
+                <h4><span class="font-weight-bold">Descripción</span></h4>
+                <p class="text">{{movie.overview}}
+            </div>
+            <div class="genere mt-5">
+                <p class="info font-weight-bold color-title mt-4">KNOWN CREDIT</p>
+                <p class="font-weight-bold"><span class="yellow">206</span></p>
+                <p class="info font-weight-bold color-title mt-4">PLACE OF BIRTH</p>
+                <p class="font-weight-bold">{{movie.release_date}}</p>
+                <p class="info font-weight-bold color-title mt-4">OFFICIAL WEBSITE</p>
+                <a href="{{movie.homepage}}" target="_blank">{{movie.homepage}}</a>
+            </div>
+        </div>
+        <!-- <div class="container mt-5 pb-5" *ngIf="related == null">
+
+        </div> -->
+        <div class="container mt-5 pb-5" *ngIf="related != null">
+            <h4 class="font-weight-bold">Peliculas Relacionadas</h4>
+            <div class="galeria col-12 row ">
+
+                <div class="mb-5" *ngFor="let relatedMovies of related.results | slice:0:7">
+                    <img class="imagen mb-5" style="width: 150px; height:200px" src="{{this.uriImage}}{{relatedMovies.poster_path}}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
